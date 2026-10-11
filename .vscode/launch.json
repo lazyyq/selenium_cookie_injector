@@ -1,0 +1,32 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "1. IROS PM10SESSIONID 쿠키 주입 (9222)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/main.py",
+      "python": "${workspaceFolder}/.venv/Scripts/python.exe",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "args": [
+        "9222",
+        "www.iros.go.kr",
+        "PM10SESSIONID",
+        "11111111-1111-1111-1111-111111111111"
+      ]
+    },
+    {
+      "name": "2. Selenium 테스트 Chrome 실행 (9222)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/tools/launch_selenium.py",
+      "python": "${workspaceFolder}/.venv/Scripts/python.exe",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "args": ["--port", "9222"]
+    }
+  ]
+}
